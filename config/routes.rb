@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  telegram_webhook TelegramWeatherController, :weather
+  telegram_webhook TelegramFortuneController, :fortune
+# telegram_webhooks firstbot: TelegramBot::FirstbotController,
+#                   secondbot: TelegramBot::SecondbotController
+  root to: "home#index"
 end

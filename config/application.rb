@@ -24,12 +24,21 @@ module FortuneTellerBot
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.generators do |g|
+      g.assets false
+      g.channel assets: false
+      g.controller_specs false
+      g.factory_bot true
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
+      g.helper false
+      g.helper_specs false
+      g.stylesheets false
+      # g.system_tests false
+      g.view_specs false
+      g.test_framework :rspec
+    end
 
-    # Don't generate system test files.
+    config.paths.add "services", eager_load: true
     config.generators.system_tests = nil
   end
 end

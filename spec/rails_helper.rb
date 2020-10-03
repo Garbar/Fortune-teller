@@ -4,7 +4,6 @@ require File.expand_path("../config/environment", __dir__) # Prevent database tr
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
-require "pundit/rspec"
 require "webdrivers" unless ENV["DOCKER"]
 
 # Require all support folder files
@@ -18,9 +17,9 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include ActiveSupport::Testing::TimeHelpers
-  config.after do
-    Warden.test_reset!
-  end
+  # config.after do
+  #   Warden.test_reset!
+  # end
 
   Shoulda::Matchers.configure do |shoulda_config|
     shoulda_config.integrate do |with|

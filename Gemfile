@@ -1,15 +1,15 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby "2.7.1"
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
-gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
-gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 4.0'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
+gem "rails", "~> 6.0.3", ">= 6.0.3.3"
+gem "pg", ">= 0.18", "< 2.0"
+gem "puma", "~> 4.1"
+gem "sass-rails", ">= 6"
+gem "webpacker", "~> 4.0"
+gem "turbolinks", "~> 5"
+gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -19,7 +19,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do
   gem "bullet" # Detect and fix N+1 queries
@@ -52,6 +52,6 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'telegram-bot'
+gem "telegram-bot"
